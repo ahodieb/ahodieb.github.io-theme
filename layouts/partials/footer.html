@@ -7,7 +7,7 @@
   </div>
 </section>
 {{ if .Site.GoogleAnalytics }}
-{{ template "_internal/google_analytics_async.html" . }}
+{{ template "_internal/google_analytics.html" . }}
 {{ end }}
 {{ if .Site.Params.matomoAnalytics }}
 {{- partial "analytics/matomo" . -}}
@@ -15,9 +15,11 @@
 {{ if .Site.Params.fathomAnalytics }}
 {{- partial "analytics/fathom" . -}}
 {{ end }}
-
 {{ if .Site.Params.hotjarAnalytics}}
 {{- partial "analytics/hotjar" . -}}
+{{ end }}
+{{ if .Site.Params.plausibleAnalytics}}
+{{- partial "analytics/plausible" . -}}
 {{ end }}
 </body>
 </html>
