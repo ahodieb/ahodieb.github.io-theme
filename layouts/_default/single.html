@@ -14,6 +14,14 @@
     {{ end }}
     <div class="content">
       {{ .Content }}
+      {{- $Permalink := (.Permalink) -}}
+      {{- with $username := ( index .Site.Params.social "twitter") -}}  
+        <div class="container">
+          <a href="https://twitter.com/intent/tweet?text=@{{ $username }}%0A%0A{{ $Permalink }}" target='_blank'>
+            <img src="https://img.shields.io/badge/-discuss-blue?style=for-the-badge&logo=Twitter&logoColor=white"/>
+          </a>
+        </div>
+      {{- end -}}
       {{ if .Site.Params.Info.related }}
       <div class="related">{{ partial "related" . }}</div>
       {{ end }}
@@ -23,6 +31,7 @@
     {{ end}}
   </div>
 </section>
+
 {{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
     <script src="/js/copycode.js"></script>
 {{ end }}
