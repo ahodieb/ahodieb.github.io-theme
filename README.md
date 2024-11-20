@@ -6,7 +6,7 @@ It is only intended for my personal use, anyone is welcome to fork and use it bu
 
 ---
 
-<detail>
+<details>
 <summary> License and copyrights </summary>
 
 ## License
@@ -21,4 +21,4 @@ The following resources are included in the theme:
 
 [Emir Ribic](https://github.com/ribice)
 
-</detail>
+</details>
